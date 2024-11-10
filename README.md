@@ -31,7 +31,8 @@ echo "export CELESTIA_PORT="11"" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
-# download binary
+**download binary**
+```
 cd $HOME 
 rm -rf celestia-app 
 git clone https://github.com/celestiaorg/celestia-app.git 
@@ -39,6 +40,7 @@ cd celestia-app/
 APP_VERSION=v2.3.1-mocha
 git checkout tags/$APP_VERSION -b $APP_VERSION 
 make install
+```
 
 # config and init app
 celestia-appd config node tcp://localhost:${CELESTIA_PORT}657
