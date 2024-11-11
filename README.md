@@ -42,12 +42,14 @@ git checkout tags/$APP_VERSION -b $APP_VERSION
 make install
 ```
 
-# config and init app
+**config and init app**
+```
 celestia-appd config node tcp://localhost:${CELESTIA_PORT}657
 celestia-appd config keyring-backend os
 celestia-appd config chain-id mocha-4
 celestia-appd init $MONIKER --chain-id mocha-4
 celestia-appd download-genesis mocha-4
+```
 
 # download genesis and addrbook
 wget -O $HOME/.celestia-app/config/genesis.json https://server-4.itrocket.net/testnet/celestia/genesis.json
