@@ -57,11 +57,13 @@ wget -O $HOME/.celestia-app/config/genesis.json https://server-4.itrocket.net/te
 wget -O $HOME/.celestia-app/config/addrbook.json  https://server-4.itrocket.net/testnet/celestia/addrbook.json
 ```
 
-# set seeds and peers
+**set seeds and peers**
+```
 SEEDS="5d0bf034d6e6a8b5ee31a2f42f753f1107b3a00e@celestia-testnet-seed.itrocket.net:11656"
 PEERS="daf2cecee2bd7f1b3bf94839f993f807c6b15fbf@celestia-testnet-peer.itrocket.net:11656,6ec29df7709624d7deb589e0c5b0334be92bfa6b@37.59.57.210:26656,782a9828116f70a879d91e57156bf76c73333e53@38.46.221.159:26656,2da156fc133e1ecccb49edc67ffd0684b1811385@148.113.189.152:26656,a831cf42d79aded9d25efd71b1a6629311c2f644@95.217.120.205:11656,ee9f90974f85c59d3861fc7f7edb10894f6ac3c8@65.109.16.220:26656,6fde8d9cffe2c2fd5c6e4555dde41901a7d63540@65.108.234.28:36656,5a7566aa030f7e5e7114dc9764f944b2b1324bcd@65.109.23.114:11656,71db31cd8db312afa6f2cf48971c8430d612a5ad@206.189.143.243:26656,6cabdecd60b320c9481df4e63678623026283fab@136.243.94.113:26656,cee58e7a8724fea3022be98898d7346d12a0ef80@164.152.162.119:36656,048aa4dd677c7b49e7fed942a94aa82f8b5c0b43@38.101.149.243:56656,5f22818fcf0d8cab31a490ae038b4f06a5632685@95.217.225.107:26656,04d51161e4431b8e5f4d6d8b14655d041b3ea041@51.178.74.112:11056,aea85cf7e03258e9b02cdd8854f64857e9046d73@89.187.156.100:26698,174f976b84674e69322d61917629494d595dd847@144.24.165.142:26656,60016ce0be12c7361493e254e5c99c1cf4b6dcc2@205.178.183.14:26656,2abbf1892ce9d91acbbc55b112f3561b01fc3465@162.62.126.26:26656,c758100ed28cbc8bb657352b049b452ddad71247@141.98.217.188:26656,c2870ce12cfb08c4ff66c9ad7c49533d2bd8d412@185.183.33.109:26656,85aef6d15d0197baff696b6e31c88e0f21073c59@162.55.245.144:2400"
 sed -i -e "/^\[p2p\]/,/^\[/{s/^[[:space:]]*seeds *=.*/seeds = \"$SEEDS\"/}" \
        -e "/^\[p2p\]/,/^\[/{s/^[[:space:]]*persistent_peers *=.*/persistent_peers = \"$PEERS\"/}" $HOME/.celestia-app/config/config.toml
+```
 
 # set custom ports in app.toml
 sed -i.bak -e "s%:1317%:${CELESTIA_PORT}317%g;
