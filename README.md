@@ -65,7 +65,8 @@ sed -i -e "/^\[p2p\]/,/^\[/{s/^[[:space:]]*seeds *=.*/seeds = \"$SEEDS\"/}" \
        -e "/^\[p2p\]/,/^\[/{s/^[[:space:]]*persistent_peers *=.*/persistent_peers = \"$PEERS\"/}" $HOME/.celestia-app/config/config.toml
 ```
 
-# set custom ports in app.toml
+**set custom ports in app.toml**
+```
 sed -i.bak -e "s%:1317%:${CELESTIA_PORT}317%g;
 s%:8080%:${CELESTIA_PORT}080%g;
 s%:9090%:${CELESTIA_PORT}090%g;
@@ -73,6 +74,7 @@ s%:9091%:${CELESTIA_PORT}091%g;
 s%:8545%:${CELESTIA_PORT}545%g;
 s%:8546%:${CELESTIA_PORT}546%g;
 s%:6065%:${CELESTIA_PORT}065%g" $HOME/.celestia-app/config/app.toml
+```
 
 # set custom ports in config.toml file
 sed -i.bak -e "s%:26658%:${CELESTIA_PORT}658%g;
