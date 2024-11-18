@@ -100,7 +100,8 @@ sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.celestia-app/config/c
 sed -i -e "s/^indexer *=.*/indexer = \"null\"/" $HOME/.celestia-app/config/config.toml
 ```
 
-# create service file
+**create service file**
+```
 sudo tee /etc/systemd/system/celestia-appd.service > /dev/null <<EOF
 [Unit]
 Description=Celestia node
@@ -115,6 +116,7 @@ LimitNOFILE=65535
 [Install]
 WantedBy=multi-user.target
 EOF
+```
 
 # reset and download snapshot
 celestia-appd tendermint unsafe-reset-all --home $HOME/.celestia-app
