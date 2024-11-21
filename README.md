@@ -140,8 +140,10 @@ source <(curl -s https://itrocket.net/api/testnet/celestia/autoinstall/)
 ```
 
 Create wallet
-# to create a new wallet, use the following command. don’t forget to save the mnemonic
+**to create a new wallet, use the following command. don’t forget to save the mnemonic**
+```
 celestia-appd keys add $WALLET
+```
 
 # to restore exexuting wallet, use the following command
 celestia-appd keys add $WALLET --recover
