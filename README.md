@@ -169,7 +169,8 @@ celestia-appd status 2>&1 | jq
 celestia-appd query bank balances $WALLET_ADDRESS
 ```
 
-Node Sync Status Checker
+**Node Sync Status Checker**
+```
 #!/bin/bash
 rpc_port=$(grep -m 1 -oP '^laddr = "\K[^"]+' "$HOME/.celestia-app/config/config.toml" | cut -d ':' -f 3)
 while true; do
@@ -191,6 +192,8 @@ while true; do
 
   sleep 5
 done
+```
+
 Create validator
 Moniker
 Identity
