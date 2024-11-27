@@ -194,20 +194,8 @@ while true; do
 done
 ```
 
-Create validator
-Moniker
-Identity
-Details
-I love blockchain ❤️
-Amount, utia
-1000000
-Commission rate
-0.1
-Commission max rate
-0.2
-Commission max change rate
-0.01
-Website
+**Create validator**
+```
 celestia-appd tx staking create-validator \
 --amount 1000000utia \
 --from $WALLET \
@@ -223,6 +211,8 @@ celestia-appd tx staking create-validator \
 --chain-id mocha-4 \
 --gas auto --gas-adjustment 1.5 --gas-prices 0.005utia \
 -y
+```
+
 Monitoring
 If you want to have set up a monitoring and alert system use our cosmos nodes monitoring guide with tenderduty
 
