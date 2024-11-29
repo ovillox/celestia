@@ -224,10 +224,12 @@ sudo ufw allow ${CELESTIA_PORT}656/tcp
 sudo ufw enable
 ```
 
-Delete node
+**Delete node**
+```
 sudo systemctl stop celestia-appd
 sudo systemctl disable celestia-appd
 sudo rm -rf /etc/systemd/system/celestia-appd.service
 sudo rm $(which celestia-appd)
 sudo rm -rf $HOME/.celestia-app
 sed -i "/CELESTIA_/d" $HOME/.bash_profile
+```
