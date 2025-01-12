@@ -236,3 +236,4 @@ sudo rm -rf $HOME/.celestia-app
 sed -i "/CELESTIA_/d" $HOME/.bash_profile
 ```
 Initial project overview
+Add project goals and scope
