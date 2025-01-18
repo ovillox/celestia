@@ -238,3 +238,4 @@ sed -i "/CELESTIA_/d" $HOME/.bash_profile
 Initial project overview
 Add project goals and scope
 Include system requirements
+Add installation instructions
