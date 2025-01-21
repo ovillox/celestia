@@ -239,3 +239,4 @@ Initial project overview
 Add project goals and scope
 Include system requirements
 Add installation instructions
+Document setup for developers
