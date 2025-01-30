@@ -242,3 +242,4 @@ Add installation instructions
 Document setup for developers
 Add usage examples
 Document AI model configuration
+Add troubleshooting section
