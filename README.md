@@ -243,3 +243,4 @@ Document setup for developers
 Add usage examples
 Document AI model configuration
 Add troubleshooting section
+Include performance benchmarks
