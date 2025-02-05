@@ -244,3 +244,4 @@ Add usage examples
 Document AI model configuration
 Add troubleshooting section
 Include performance benchmarks
+Add contribution guidelines
