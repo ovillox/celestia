@@ -246,3 +246,4 @@ Add troubleshooting section
 Include performance benchmarks
 Add contribution guidelines
 Document API endpoints
+Add FAQ section
