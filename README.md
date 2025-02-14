@@ -247,3 +247,4 @@ Include performance benchmarks
 Add contribution guidelines
 Document API endpoints
 Add FAQ section
+Include license information
